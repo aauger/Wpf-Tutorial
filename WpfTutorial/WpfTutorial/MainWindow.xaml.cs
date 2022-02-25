@@ -20,9 +20,15 @@ namespace WpfTutorial
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxNames.Items.Add(textBoxName.Text);
         }
     }
 }
