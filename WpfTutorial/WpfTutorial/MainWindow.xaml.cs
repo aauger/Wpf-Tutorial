@@ -25,10 +25,5 @@ namespace WpfTutorial
         {
             InitializeComponent();
         }
-
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
-        {
-            listBoxNames.Items.Add(textBoxName.Text);
-        }
     }
 }
