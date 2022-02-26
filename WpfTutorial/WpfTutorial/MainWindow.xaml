@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72">
-            Hello, WPF!
-        </TextBlock>
+        <Button FontWeight="Bold" Name="MyButton" Click="MyButton_Click">
+            <WrapPanel Orientation="Vertical">
+                <TextBlock>Hello World!</TextBlock>
+                <TextBlock>This is WPF</TextBlock>
+                <TextBlock Foreground="Red">BUTTON</TextBlock>
+            </WrapPanel>
+        </Button>
     </Grid>
 </Window>

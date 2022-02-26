@@ -25,5 +25,10 @@ namespace WpfTutorial
         {
             InitializeComponent();
         }
+
+        private void MyButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"I was clicked on {DateTime.Now}");
+        }
     }
 }
