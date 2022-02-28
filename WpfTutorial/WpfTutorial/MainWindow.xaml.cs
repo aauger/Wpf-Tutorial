@@ -29,6 +29,7 @@ namespace WpfTutorial
         private void MyButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"I was clicked on {DateTime.Now}");
+            throw new Exception();
         }
     }
 }
