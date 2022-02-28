@@ -11,12 +11,28 @@
         <sys:String x:Key="JP_HelloWorld">こんにちは世界</sys:String>
     </Window.Resources>
     <Grid>
-        <Button FontWeight="Bold" Name="MyButton" Click="MyButton_Click">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button FontWeight="Bold" Name="MyButton" Click="MyButton_Click" Margin="10,10,10,10" Grid.Column="0">
             <WrapPanel Orientation="Vertical">
                 <TextBlock Text="{StaticResource JP_HelloWorld}"></TextBlock>
                 <TextBlock>This is WPF</TextBlock>
                 <TextBlock Foreground="Red" Text="{StaticResource EN_HelloWorld}"></TextBlock>
             </WrapPanel>
+        </Button>
+
+        <Button Grid.Column="1" Margin="10,10,10,10">
+            <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </TextBlock>
         </Button>
     </Grid>
 </Window>
