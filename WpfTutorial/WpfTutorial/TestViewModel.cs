@@ -4,11 +4,16 @@ namespace WpfTutorial
 {
     public class TestViewModel : INotifyPropertyChanged
     {
-        public TestModel? testModel { get; set; }
+        private TestModel testModel;
+
+        public TestViewModel(TestModel testModel)
+        {
+            this.testModel = testModel;
+        }
 
         public string Title
         {
-            get { return testModel.Title; }
+            get => testModel.Title;
             set { testModel.Title = value; NotifyPropertyChanged("Title"); }
         }
 

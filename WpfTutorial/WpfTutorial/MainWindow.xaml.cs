@@ -20,13 +20,12 @@ namespace WpfTutorial
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly TestViewModel viewModel;
+        private TestViewModel viewModel;
 
         public MainWindow()
         {
-            this.viewModel = new TestViewModel();
-            viewModel.testModel = new TestModel();
-            viewModel.testModel.Title = "Hello World!";
+            this.viewModel = new TestViewModel(new TestModel());
+            viewModel.Title = "Hello World!";
 
             DataContext = this.viewModel;
             InitializeComponent();
@@ -36,7 +35,12 @@ namespace WpfTutorial
 
         private void MyButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"I was clicked on {DateTime.Now}");
+            TestModel newModel = new TestModel
+            {
+                Title = "Hello world!"
+            };
+            this.viewModel = new TestViewModel(newModel);
+            DataContext = this.viewModel;
         }
     }
 }
