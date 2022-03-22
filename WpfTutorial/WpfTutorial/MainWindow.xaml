@@ -26,6 +26,7 @@
                 <TextBlock Text="{StaticResource JP_HelloWorld}"></TextBlock>
                 <TextBlock>This is WPF</TextBlock>
                 <TextBlock Foreground="Red" Text="{StaticResource EN_HelloWorld}"></TextBlock>
+                <Button Command="{Binding Path=ChangeTitleCommand}">Internal Button :^)</Button>
                 <TextBlock Text="{Binding Path=Title}"></TextBlock>
             </WrapPanel>
         </Button>
